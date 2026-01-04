@@ -1,0 +1,536 @@
+[4:30 PM, 1/4/2026] Sarim: <section>
+    <div class="header-content">
+    <span class="top-label">OUR USP'S</span>
+    <h2>What we stand for</h2>
+    <p>In today's world, businesses face increasing scrutiny over sustainability claims. Our projects are fully compliant with evolving regulations, ensuring you stay ahead of legal requirements.</p>
+    <p>At shajar, we help you avoid greenwashing and safeguard your brand's reputation with verifiable, transparent solutions.</p>
+    <a href="#" class="cta-button">Schedule a call &rarr;</a>
+  </div>
+
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item left">
+      <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+      <div class="content-card">
+        <h3>Transparency</h3>
+ …
+[4:43 PM, 1/4/2026] Sarim: /* Global variables used on home page */
+:root {
+  --dark-green: #0b2b1d;
+  --light-beige: #e9e8de;
+  --accent-green: #8db53f;
+  --card-bg: #f9f9f5;
+  --white: #ffffff;
+  --serif-font: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans-font: 'Inter', sans-serif;
+}
+
+/* General body background */
+body {
+    background-color: #f4f3ee; /* Light off-white background */
+}
+
+/* Navbar (shared but used on home) */
+.navbar {
+    background-color: #f4f3ee;
+    padding: 15px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #062c1f;
+    letter-spacing: 1px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #062c1f;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-signup {
+    text-decoration: none;
+    background-color: #062c1f;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: #0a422f;
+}/* About us page styles */
+/* Hero Section Styling */
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    background: linear-gradient(rgba(10, 40, 20, 0.8), rgba(10, 40, 20, 0.8)), 
+                url('your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;              /* Yeh important – flex enable karo */
+    align-items: center;        /* Vertically center */
+    justify-content: center;    /* Horizontally center */
+    text-align: center;         /* Text ko center */
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;             /* Extra safety ke liye */
+    text-align: center;         /* Text center */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  /* Matching the serif-style font in your image */
+  font-family: 'Times New Roman', serif;
+   
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+/* End of hero section styles */
+/* Start of Our story section styles */
+/* Container styling */
+.story-container {
+  padding: 80px 20px;
+  background-color: #f4f3ee;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.story-content {
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Image Side */
+.story-image-wrapper {
+  flex: 1;
+  background-color: #0d3d2e; /* Deep forest green */
+  border-radius: 30px;
+  overflow: hidden;
+  display: block;
+  align-items: flex-end; /* Keeps people at the bottom of the frame */
+  min-width: 400px;
+}
+
+.story-image-wrapper img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text Side */
+.story-text {
+  flex: 1;
+}
+
+.subtitle {
+  color: #76c837; /* Bright lime green color */
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+story-text h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.8rem;
+  color: #1a1a1a;
+  margin: 0 0 25px 0;
+}
+
+.story-text p {
+  font-family: Arial, sans-serif;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .story-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .story-image-wrapper {
+    min-width: 100%;
+  }
+}
+/* End of Our story section styles */
+/* Starting of verified Tree planting section styles */
+.verified-section {
+  background-color: #f4f3ee; /* Off-white background */
+  padding: 100px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Standards / Verified Tree Planting section (matches HTML .standards-section) */
+.standards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f4f3ee;
+}
+
+.standards-section .container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.standards-section .logo-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .standards-section .logo-grid { flex-wrap: wrap; }
+  .standards-section .logo-card { flex: 1 1 100%; max-width: 100%; }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.verified-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Header Styles */
+.top-label {
+  color: #76c837; /* Accent green */
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  font-size: 1rem;
+}
+
+/* Logo Grid Styles */
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo-card {
+  background: #ebeae6; /* Slightly darker than section background */
+  padding: 30px;
+  border-radius: 12px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 220px;
+  min-width: 180px;
+  max-width: 220px;
+  height: 80px;
+  /* Subtle drop shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 60px;
+  filter: grayscale(1); /* Matches the muted look in the screenshot */
+  opacity: 0.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .logo-card {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+/* Desktop: keep logos in a single centered row, allow horizontal scroll if too many */
+@media (min-width: 769px) {
+  .verified-section .logo-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px; /* room for scroll */
+  }
+  .verified-section .logo-grid::-webkit-scrollbar { height: 8px; }
+}
+/* End of verified Tree planting section styles */
+/* Starting of Our UP'S section styles */
+.usp-section {
+  background-color: #f4f3ee;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+/* Header & Button */
+.top-label { color: #76c837; font-weight: bold; font-size: 0.8rem; display: block; margin-bottom: 10px; }
+.usp-section h2 { font-family: 'Times New Roman', serif; font-size: 2.5rem; margin-bottom: 20px; }
+.usp-section p { max-width: 700px; margin: 0 auto 15px; color: #666; line-height: 1.5; }
+
+.cta-button {
+  display: inline-block;
+  background-color: #76c837;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+/* Timeline Layout */
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e0e0e0;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+  display: block;
+  align-items: center;
+}
+
+.icon-circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #76c837;
+  border-radius: 50%;
+  color: white;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+/* Card Styling */
+.content-card {
+  width: 48%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px 50px 50px 20px; /* Matching the unique rounded style */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+/* Alternating Logic */
+.timeline-item.left { justify-content: flex-start; }
+.timeline-item.right { justify-content: flex-end; }
+
+.timeline-item.right .content-card {
+  border-radius: 50px 20px 20px 50px;
+  text-align: left;
+}
+
+.content-card h3 { color: #76c837; margin-top: 0; font-size: 1.3rem; }
+.content-card p { font-size: 0.9rem; color: #555; margin-bottom: 0; }
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .timeline-line { left: 30px; }
+  .icon-circle { left: 30px; transform: none; }
+  .content-card { width: 80%; margin-left: 70px !important; }
+  .timeline-item.left, .timeline-item.right { justify-content: flex-start; }
+}
+/* End of Our UP'S section styles */
+/* Approach section styles */
+.approach-section {
+  background-color: #0d3d2e; /* Deep forest green */
+  color: #ffffff;
+  padding: 100px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.label {
+  color: #76c837; /* Accent lime green */
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  line-height: 1.5;
+}
+
+/* Grid and Cards */
+.approach-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.approach-card {
+  background-color: #144e3d; /* Slightly lighter green for cards */
+  color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
