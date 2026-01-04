@@ -1,0 +1,383 @@
+/* services.css - Services Page Specific Styles */
+/* Includes styles for header/navbar and footer if they need page-specific overrides */
+/* Most navbar and footer styles should be in global style.css, but included here for completeness if standalone */
+
+:root {
+  --dark-green: #062c1f;
+  --lime-green: #72e145;
+  --light-beige: #f4f3ee;
+  --text-dark: #032018;
+  --text-muted: #555;
+  --white: #ffffff;
+  --serif-font: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans-font: 'Inter', sans-serif;
+}
+
+/* =================================== */
+/* Navbar (shared - can stay in global, but included for standalone use) */
+/* =================================== */
+.navbar {
+  background-color: var(--light-beige);
+  padding: 15px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-green);
+  letter-spacing: 1px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--dark-green);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn-signup {
+  text-decoration: none;
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+  background-color: #0a422f;
+}
+
+/* =================================== */
+/* Hero Section */
+/* =================================== */
+.hero-header {
+  background-color: var(--light-beige);
+  padding: 0 10px;
+}
+
+.hero-inner {
+  background: linear-gradient(rgba(11, 43, 29, 0.8), rgba(11, 43, 29, 0.8)),
+              url('../images/forest-bg.jpg'); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 120px 20px;
+  text-align: center;
+  border-radius: 0 0 60px 60px;
+}
+
+.hero-inner h1 {
+  font-family: var(--serif-font);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-inner p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* =================================== */
+/* USP / Intro Section */
+/* =================================== */
+.usp-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: var(--light-beige);
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-label {
+  color: var(--lime-green);
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-content h2 {
+  font-family: var(--serif-font);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 20px 0;
+  color: var(--text-dark);
+}
+
+.header-content p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--lime-green);
+  color: var(--text-dark);
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+/* =================================== */
+/* Feature Cards Grid */
+/* =================================== */
+.impact-grid {
+  padding: 60px 20px;
+  background-color: var(--white);
+  background-position: 100%;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.f-card {
+  background: var(--light-beige);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.f-card span {
+  display: inline-block;
+  color: var(--lime-green);
+  font-size: 1.8rem;
+  margin-right: 12px;
+}
+
+/* =================================== */
+/* Achievements Sections (Image + Text / Video + Text) */
+/* =================================== */
+.achievements-section {
+  padding: 100px 20px;
+  background-color: var(--light-beige);
+}
+
+.achievements-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.achievements-gallery {
+  flex: 1;
+  min-width: 300px;
+}
+
+.gallery-video video {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  height: fit-content;
+}
+
+.gallery-top img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.achievements-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.sub-label {
+  color: var(--lime-green);
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.achievements-text h2 {
+  font-family: var(--serif-font);
+  font-size: 2.5rem;
+  margin: 15px 0 25px;
+  line-height: 1.2;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.achievements-text .description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  text-align:center;
+}
+
+.make-change {
+  color: var(--lime-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.make-change:hover {
+  text-decoration: underline;
+}
+
+.learn-more-btn {
+  background-color: var(--lime-green);
+  color: var(--text-dark);
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =================================== */
+/* Footer (shared - can stay in global, included for standalone) */
+/* =================================== */
+.main-footer {
+  background-color: var(--light-beige);
+  padding-top: 60px;
+}
+
+.footer-container {
+  background-color: #113d2b;
+  color: var(--white);
+  padding: 50px 40px 40px;
+  border-radius: 60px 60px 0 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--sans-font);
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-legal a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+/* =================================== */
+/* Responsive Adjustments */
+/* =================================== */
+@media (max-width: 992px) {
+  .achievements-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .achievements-text {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner h1 {
+    font-size: 2.8rem;
+  }
+
+  .header-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+}
